@@ -1,0 +1,22 @@
+﻿@using MvcHtmlHelpersApp.Views.Helpers
+
+@{
+    ViewData["Title"] = "Home Page";
+
+    string[] companies = new[] { "Yandex", "Ozon", "Mail Group", "Kaspersky" };
+    string[] users = new[] { "Bob", "Sam", "Joe", "Tim", "Leo", "Ben" };
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<h2>Companies:</h2>
+<div>
+    @Html.CreateList(companies)
+</div>
+<h2>Users:</h2>
+<div>
+    @ListHelper.CreateList(Html, companies)
+</div>

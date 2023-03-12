@@ -23,6 +23,28 @@ namespace MvcHtmlHelpersApp.Controllers
             return View();
         }
 
+        public IActionResult Empl()
+        {
+            Employe e = new() { Name = "Bob", Age = 32 };
+            return View(e);
+        }
+        
+        public IActionResult Item()
+        {
+            return View();
+        }
+
+        public IActionResult List()
+        {
+            List<Book> books = new()
+            {
+                new(){ Id = 23, Title = "Mu-mu" },
+                new(){ Id = 45, Title = "Ruslan and Ludmila" },
+                new(){ Id = 128, Title = "Idiot" }
+            };
+            return View(books);
+        }
+
         [HttpGet]
         public IActionResult UserInfo() => View();
 

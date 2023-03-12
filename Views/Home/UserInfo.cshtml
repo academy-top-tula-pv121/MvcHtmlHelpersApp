@@ -9,6 +9,34 @@
         @Html.TextBox("Age", "", new { type="number"})
     </p>
     <p>
+        @Html.TextArea("txtarea", "", 4, 40, null)
+    </p>
+    <p>
+        @Html.RadioButton("lang", "cpp")
+        @Html.Label("", "C++")
+        @Html.RadioButton("lang", "cs")
+        @Html.Label("", "C#")
+        @Html.RadioButton("lang", "java")
+        @Html.Label("", "Java")
+    </p>
+    <p>
+        @Html.CheckBox("Lamptech")
+        @Html.CheckBox("ASPNET", true)
+        @Html.CheckBox("CGIAPI")
+    </p>
+    <p>
+        @Html.DropDownList("city", 
+                            new SelectList(
+                                new string[]{"Tula", "Orel", "Kursk"}),
+                                "select city")
+    </p>
+    <p>
+        @Html.ListBox("city",
+                            new SelectList(
+                            new string[]{"Tula", "Orel", "Kursk"}),
+                            "select city")
+    </p>
+    <p>
         <input type="submit" value="Send">
     </p>
 }

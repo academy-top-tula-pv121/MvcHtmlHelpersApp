@@ -1,0 +1,22 @@
+﻿@model MvcHtmlHelpersApp.Models.Employe
+
+@using(Html.BeginForm("Empl", "Home", FormMethod.Post))
+{
+    @*
+    <p>
+        @Html.LabelFor(m=>m.Name, "Имя")
+        @Html.TextBoxFor(m=>m.Name) 
+        @Html.EditorFor(m=>m.Name)
+    </p>
+    <p>
+        @Html.LabelFor(m=>m.Age, "Возраст")
+        @Html.TextBoxFor(m=>m.Age, new{type="number"})
+    </p>
+    *@
+
+    @* @Html.DisplayForModel() *@
+    @Html.EditorForModel()
+    <p>
+        <input type="submit" value="Send">
+    </p>
+}   

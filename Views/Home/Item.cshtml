@@ -1,0 +1,6 @@
+﻿
+@Html.ActionLink("Return List", "List", "Gallery", new {name = "Bob", age = 34})
+<br />
+@Html.RouteLink("Text link", "default", new {action="List"})
+
+<a href="@Url.Action("List", "Gallery", new {id=123})">Link from url helper</a>

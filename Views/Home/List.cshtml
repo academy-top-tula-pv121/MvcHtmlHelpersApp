@@ -1,0 +1,13 @@
+﻿@using MvcHtmlHelpersApp.Models
+@model IEnumerable<Book>
+
+<ul>
+    @foreach(Book b in Model)
+    {
+        <li>
+        <a href="@Url.Action("Item", "Books", new { id = b.Id })">@b.Title</a>
+            @Html.ActionLink(b.Title,"Item", "Books", new { id = b.Id })
+        </li>
+    }
+
+</ul>
